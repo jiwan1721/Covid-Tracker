@@ -53,7 +53,7 @@ if(isset($_POST['docsub1']))
       <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
 
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <a class="navbar-brand" href="#"><i class="fa fa-user-plus" aria-hidden="true"></i> Global Hospital </a>
+  <a class="navbar-brand" href="#"><i class="fa fa-user-plus" aria-hidden="true"></i> Mahul Hospital </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -78,7 +78,7 @@ if(isset($_POST['docsub1']))
 
   <style >
     .bg-primary {
-    background: -webkit-linear-gradient(left, #3931af, #00c6ff);
+    background: -webkit-linear-gradient(left, #3c8341, #9ad2a6);
 }
 
 .col-md-4{
@@ -132,12 +132,12 @@ if(isset($_POST['docsub1']))
   <div class="col-md-4" style="max-width:25%;margin-top: 3%;">
     <div class="list-group" id="list-tab" role="tablist">
       <a class="list-group-item list-group-item-action active" id="list-dash-list" data-toggle="list" href="#list-dash" role="tab" aria-controls="home">Dashboard</a>
-      <a class="list-group-item list-group-item-action" href="#list-doc" id="list-doc-list"  role="tab"    aria-controls="home" data-toggle="list">Doctor List</a>
+      <a class="list-group-item list-group-item-action" href="#list-doc" id="list-doc-list"  role="tab"    aria-controls="home" data-toggle="list">Hospitals List</a>
       <a class="list-group-item list-group-item-action" href="#list-pat" id="list-pat-list"  role="tab" data-toggle="list" aria-controls="home">Patient List</a>
       <a class="list-group-item list-group-item-action" href="#list-app" id="list-app-list"  role="tab" data-toggle="list" aria-controls="home">Appointment Details</a>
       <a class="list-group-item list-group-item-action" href="#list-pres" id="list-pres-list"  role="tab" data-toggle="list" aria-controls="home">Prescription List</a>
-      <a class="list-group-item list-group-item-action" href="#list-settings" id="list-adoc-list"  role="tab" data-toggle="list" aria-controls="home">Add Doctor</a>
-      <a class="list-group-item list-group-item-action" href="#list-settings1" id="list-ddoc-list"  role="tab" data-toggle="list" aria-controls="home">Delete Doctor</a>
+      <a class="list-group-item list-group-item-action" href="#list-settings" id="list-adoc-list"  role="tab" data-toggle="list" aria-controls="home">Add Hospitals</a>
+      <a class="list-group-item list-group-item-action" href="#list-settings1" id="list-ddoc-list"  role="tab" data-toggle="list" aria-controls="home">Delete Hospitals</a>
       <a class="list-group-item list-group-item-action" href="#list-mes" id="list-mes-list"  role="tab" data-toggle="list" aria-controls="home">Queries</a>
       
     </div><br>
@@ -154,7 +154,7 @@ if(isset($_POST['docsub1']))
                   <div class="panel panel-white no-radius text-center">
                     <div class="panel-body">
                       <span class="fa-stack fa-2x"> <i class="fa fa-square fa-stack-2x text-primary"></i> <i class="fa fa-users fa-stack-1x fa-inverse"></i> </span>
-                      <h4 class="StepTitle" style="margin-top: 5%;">Doctor List</h4>
+                      <h4 class="StepTitle" style="margin-top: 5%;">Hospitals List</h4>
                       <script>
                         function clickDiv(id) {
                           document.querySelector(id).click();
@@ -162,7 +162,7 @@ if(isset($_POST['docsub1']))
                       </script> 
                       <p class="links cl-effect-1">
                         <a href="#list-doc" onclick="clickDiv('#list-doc-list')">
-                          View Doctors
+                          View Hospitals
                         </a>
                       </p>
                     </div>
@@ -222,13 +222,13 @@ if(isset($_POST['docsub1']))
                   <div class="panel panel-white no-radius text-center">
                     <div class="panel-body" >
                       <span class="fa-stack fa-2x"> <i class="fa fa-square fa-stack-2x text-primary"></i> <i class="fa fa-plus fa-stack-1x fa-inverse"></i> </span>
-                      <h4 class="StepTitle" style="margin-top: 5%;">Manage Doctors</h4>
+                      <h4 class="StepTitle" style="margin-top: 5%;">Manage Hospitals</h4>
                     
                       <p class="cl-effect-1">
-                        <a href="#app-hist" onclick="clickDiv('#list-adoc-list')">Add Doctors</a>
+                        <a href="#app-hist" onclick="clickDiv('#list-adoc-list')">Add Hospitals</a>
                         &nbsp|
                         <a href="#app-hist" onclick="clickDiv('#list-ddoc-list')">
-                          Delete Doctors
+                          Delete Hospitals
                         </a>
                       </p>
                     </div>
@@ -263,7 +263,7 @@ if(isset($_POST['docsub1']))
               <table class="table table-hover">
                 <thead>
                   <tr>
-                    <th scope="col">Doctor Name</th>
+                    <th scope="col">Hospitals Name</th>
                     <th scope="col">Specialization</th>
                     <th scope="col">Email</th>
                     <th scope="col">Password</th>
@@ -365,7 +365,7 @@ if(isset($_POST['docsub1']))
               <table class="table table-hover">
                 <thead>
                   <tr>
-                  <th scope="col">Doctor</th>
+                  <th scope="col">Hospitals</th>
                     <th scope="col">Patient ID</th>
                     <th scope="col">Appointment ID</th>
                     <th scope="col">First Name</th>
@@ -441,7 +441,7 @@ if(isset($_POST['docsub1']))
                     <th scope="col">Gender</th>
                     <th scope="col">Email</th>
                     <th scope="col">Contact</th>
-                    <th scope="col">Doctor Name</th>
+                    <th scope="col">Hospital Name</th>
                     <th scope="col">Consultancy Fees</th>
                     <th scope="col">Appointment Date</th>
                     <th scope="col">Appointment Time</th>
@@ -497,7 +497,7 @@ if(isset($_POST['docsub1']))
       <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">
         <form class="form-group" method="post" action="admin-panel1.php">
           <div class="row">
-                  <div class="col-md-4"><label>Doctor Name:</label></div>
+                  <div class="col-md-4"><label>Hospitals Name:</label></div>
                   <div class="col-md-8"><input type="text" class="form-control" name="doctor" onkeydown="return alphaOnly(event);" required></div><br><br>
                   <div class="col-md-4"><label>Specialization:</label></div>
                   <div class="col-md-8">
