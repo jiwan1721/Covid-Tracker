@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <?php 
+include('func1.php');
 $con=mysqli_connect("localhost","root","","myhmsdb");
-
-include('newfunc.php');
+$doctor = $_SESSION['dname'];
 ?>
 <html lang="en">
   <head>
@@ -10,49 +10,35 @@ include('newfunc.php');
 
     <!-- Required meta tags -->
     <meta charset="utf-8">
-    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" type="text/css" href="font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="vendor/fontawesome/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-      <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
 
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <a class="navbar-brand" href="#"><i class="fa fa-user-plus" aria-hidden="true"></i>Covid Tracker   </a>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+  <a class="navbar-brand" href="#"><i class="fa fa-user-plus" aria-hidden="true"></i> Covid Tracker </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
-  <script >
-    var check = function() {
-  if (document.getElementById('dpassword').value ==
-    document.getElementById('cdpassword').value) {
-    document.getElementById('message').style.color = '#5dd05d';
-    document.getElementById('message').innerHTML = 'Matched';
-  } else {
-    document.getElementById('message').style.color = '#f55252';
-    document.getElementById('message').innerHTML = 'Not Matching';
-  }
-}
-
-    function alphaOnly(event) {
-  var key = event.keyCode;
-  return ((key >= 65 && key <= 90) || key == 8 || key == 32);
-};
-  </script>
+    <style >
+      .btn-outline-light:hover{
+        color: #25bef7;
+        background-color: #f8f9fa;
+        border-color: #f8f9fa;
+      }
+    </style>
 
   <style >
     .bg-primary {
     background: -webkit-linear-gradient(left, #3c8341, #9ad2a6);
 }
-
-.col-md-4{
-  max-width:20% !important;
-}
-
 .list-group-item.active {
     z-index: 2;
     color: #fff;
@@ -61,19 +47,6 @@ include('newfunc.php');
 }
 .text-primary {
     color: #342ac1!important;
-}
-
-#cpass {
-  display: -webkit-box;
-}
-
-#list-app{
-  font-size:15px;
-}
-
-.btn-primary{
-  background-color: #3c50c1;
-  border-color: #3c50c1;
 }
   </style>
 
@@ -95,8 +68,7 @@ include('newfunc.php');
   </style>
   <body style="padding-top:50px;">
    <div class="container-fluid" style="margin-top:50px;">
-    <h3 style = "margin-left: 40%; padding-bottom: 20px;font-family: 'IBM Plex Sans', sans-serif;"> WELCOME ADMIN </h3>
-
+    <h3 style = "margin-left: 40%; padding-bottom: 20px;font-family:'IBM Plex Sans', sans-serif;"> Welcome &nbsp<?php echo $_SESSION['dname'] ?>  </h3> 
    </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

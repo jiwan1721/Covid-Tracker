@@ -13,7 +13,7 @@ if(isset($_POST['docsub1'])){
 		      $_SESSION['dname']=$row['username'];
       
     }
-		header("Location:doctor-panel.php");
+		header("Location:hospital-panel.php");
 	}
 	else{
     // header("Location:error2.php");
